@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PT. DSTech Smart Perkasa - Solusi IT dan Sistem Keamanan terpercaya">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>DSTech Smart Perkasa</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/" class="<%= page === 'home' ? 'active' : '' %>">Beranda</a></li>
+                <li><a href="/about" class="<%= page === 'about' ? 'active' : '' %>">Tentang</a></li>
+                <li><a href="/services" class="<%= page === 'services' ? 'active' : '' %>">Layanan</a></li>
+                <li><a href="/portfolio" class="<%= page === 'portfolio' ? 'active' : '' %>">Portfolio</a></li>
+                <li><a href="/contact" class="<%= page === 'contact' ? 'active' : '' %>">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <%- body %>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DSTech Smart Perkasa</h3>
+                    <p>Solusi IT dan Sistem Keamanan terpercaya untuk bisnis Anda</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="/">Beranda</a></li>
+                        <li><a href="/about">Tentang Kami</a></li>
+                        <li><a href="/services">Layanan</a></li>
+                        <li><a href="/contact">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hubungi Kami</h4>
+                    <p><i class="fas fa-phone"></i> <%= typeof process !== 'undefined' ? '+62-XXX-XXX-XXXX' : '' %></p>
+                    <p><i class="fas fa-envelope"></i> info@dstechsmartperkasa.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PT. DSTech Smart Perkasa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
